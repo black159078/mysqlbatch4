@@ -1,0 +1,71 @@
+=> Choose Database
+USE wdf007;
+
+=> Table List
+SHOW TABLES;
+SHOW FULL TABLES;
+
+
+=> Check tables from current db to another db
+SHOW TABLES FROM databasename;
+SHOW TABLES IN database;
+
+SHOW FULL TABLES FROM databasename;
+SHOW FULL TABLES IN database;
+
+
+=> Create Table
+= Syntax
+
+CREATE TABLE tablename(
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+    .....
+);
+
+CREATE TABLE IF NOT EXISTS tablename(
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+    .....
+);
+
+CREATE TABLE persons(
+    id INT,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    city VARCHAR(255),
+    address VARCHAR(255)
+);
+
+
+-----------------------------------
+
+=> Drop Table   (Single)
+
+DROP TABLE persons;
+DROP TABLE IF EXISTS persons;
+
+
+=> Drop Table (Multi / Bulk)
+DROP TABLE persons,staffs,employee,users;
+DROP TABLE IF EXISTS persons,staffs,employees,users;
+
+
+-----------------------------------
+
+
+
+=> Rename Table
+
+*Syntax
+
+ALTER TABLE oldtablename
+RENAME TO newtablename;
+
+ALTER TABLE persons
+RENAME TO peoples;
+
+
+
